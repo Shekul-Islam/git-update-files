@@ -1,0 +1,18 @@
+.menue li a{
+    color: whitesmoke;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.menue {
+    text-decoration: none;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+
+}
+
+.navbar {
+    display: block;
+    justify-content: space-between;
+}
