@@ -2,11 +2,11 @@
 var a = ["Rakib","Raju","Shakil","Mamun" ];
 console.log(a);
 
-//add work/name by last
+//add word/name by last
 a.push("Jakir");
 console.log(a);
 
-//remove work/name by last
+//remove word/name by last
 a.pop();
 console.log(a);
 a.pop(1);
@@ -45,9 +45,68 @@ f.sort(function(a,b){
 console.log(f);
 
 
-var a ="This is <br/>";
+var a ="This is";
 var b ="Our Country";
 var c =a.concat(b)
 document.write(c);
+document.write("<br>");
 
 
+//add function
+function summ () {
+    var a = 24;
+    var b = 56;
+    document.write(a+b);
+    document.write("<br>");
+    document.write(a-b);
+    
+}
+summ();
+
+document.write("<br>");
+
+function sum (a,b) {
+    document.write(a+b);
+}
+sum(88,12);
+
+
+document.write("<br>");
+
+function sam (a,b) {
+    document.write("total sum: "+(a+b));
+}
+sam(88,12);
+
+//minus function
+document.write("<br>");
+
+function min (a,b) {
+    document.write("total sum: "+(a-b));
+}
+min(88,12);
+
+document.write("<br>");
+//multiple function
+function mult (x,y) {
+    document.write("total mult: "+(x*y));
+}
+mult (15,5);
+
+document.write("<br>");
+
+function divid (x,y) {
+    document.write("total divid: "+(x/y));
+}
+divid (15,5);
+
+document.write("<br>");
+
+
+var text = substruction (6,10);
+document.write(text);
+console.log(text);
+
+function substruction (x,y) {
+    return x-y;
+}
