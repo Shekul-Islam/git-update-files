@@ -47,7 +47,7 @@ console.log(f);
 
 var a ="This is";
 var b ="Our Country";
-var c =a.concat(b)
+var c =a.concat(b);
 document.write(c);
 document.write("<br>");
 
@@ -110,3 +110,8 @@ console.log(text);
 function substruction (x,y) {
     return x-y;
 }
+
+document.write("<br>")
+var a =34;
+b=40;
+document.write(a+b);
