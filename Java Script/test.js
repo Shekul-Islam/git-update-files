@@ -115,3 +115,36 @@ document.write("<br>")
 var a =34;
 b=40;
 document.write(a+b);
+
+document.write("<br>")
+document.write("<br>")
+document.write("<br>")
+document.write("<br>")
+
+
+
+
+var score = parseInt(prompt("Please enter your score"));
+
+
+if (score>=80 && score<=100) {
+    document.write("A+");
+} 
+else if (score>=70 && score<=80) {
+    document.write("A");
+}
+else if (score>=60 && score<=70) {
+    document.write("A-");
+}
+else if (score>=50 && score<=60) {
+    document.write("B");
+}
+else if (score>=40 && score<=50) {
+    document.write("C");
+}
+else if (score>=33 && score<=40) {
+    document.write("D");
+}
+else {
+    document.write("F");
+}
