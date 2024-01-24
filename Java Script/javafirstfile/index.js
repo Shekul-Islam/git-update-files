@@ -27,6 +27,21 @@ id.unshift("Shohel","Hamim");
 console.log(id);
 
 
+const number = prompt("Enter a number: ");
+if (number % 2 == 0) {
+    console.log("The number is even.");
+}
 
+else {
+    console.log ("The number is odd.");
+}
 
+var number = prompt ("Please Enter Your Digit: ");
 
+if (number==0)
+{
+    document.write(bird);
+}
+if else (number==1) {
+    document.write("river")
+}

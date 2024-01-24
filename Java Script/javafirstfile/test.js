@@ -148,3 +148,15 @@ else if (score>=33 && score<=40) {
 else {
     document.write("F");
 }
+
+
+
+
+
+
+
+if (score>=80 && score<=100) {
+    document.write("A+");
+} 
+else if (score>=70 && score<=80) {
+    document.write("A");}
