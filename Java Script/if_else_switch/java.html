@@ -8,32 +8,134 @@
 <body>
     
     <script>
-        var score = prompt("Enter your score: ");
-        score=score.toLowerCase();
-        switch (score) {
-            case "a":
-            document.write("Vowel")
-            break;
+        // var score = prompt("Enter your score: ");
+        // score=score.toLowerCase();
+        // switch (score) {
+        //     case "a":
+        //     document.write("Vowel")
+        //     break;
             
-            case "e":
-            document.write("Vowel")
-            break;
+        //     case "e":
+        //     document.write("Vowel")
+        //     break;
 
-            case "i":
-            document.write("Vowel")
-            break;
+        //     case "i":
+        //     document.write("Vowel")
+        //     break;
 
-            case "o":
-            document.write("Vowel")
-            break;
+        //     case "o":
+        //     document.write("Vowel")
+        //     break;
 
-            case "u":
-            document.write("Vowel")
-            break;
+        //     case "u":
+        //     document.write("Vowel")
+        //     break;
         
-            default:
-            document.write("Consonent")
+        //     default:
+        //     document.write("Consonent")
+        // }
+
+
+
+        // var score = prompt("Enter your score: ");
+       
+        // switch (true) {
+        //     case (score > 100 ):
+        //     alert("Don't Entry Above 100")
+        //     break;
+
+        //     case ( score >= 80 && score <=100 ):
+        //     document.write("A");
+        //     break;
+            
+        //     case (score >= 70 && score <=80 ):
+        //     document.write("B")
+        //     break;
+
+        //     case (score >= 60 && score <=70 ):
+        //     document.write("C");
+        //     break;
+
+        //     case (score >= 50 && score <=60 ):
+        //     document.write("D");
+        //     break;
+
+        //     case (score >= 40 && score <=50 ):
+        //     document.write("Fail");
+        //     break;
+                    
+        //     default:
+        //     document.write("You are Stupid");
+        
+        // }
+
+        // for loop
+        // for (i=1; i<=4; i=i+1)
+        // {
+        //     document.write(i + "<br/>")
+        // }
+
+        // for (i=0; i<1; i++)
+        // {
+        //     document.write("Have a Good Day Sir <br/>" )
+        //     document.write("Enjoy Your Day <br/>" )
+        // }
+
+
+        // const arr = ["a", "b", "c", "d", "e", "c"];
+        //     console.log(arr);
+        //     for (let i = 0; i < arr.length; i++){
+        //         document.write(arr[i] + "<br/>")
+        //     }
+
+        // const arr = ["1", "3", "5", "3", "2", "4"];
+        //     console.log(arr);
+        //     for (let i = 0; i < arr.length; i++){
+        //         document.write(arr[i] + "<br/>")
+        //     }
+
+
+        // for (i=11; i<=20; i++){
+        //     document.write("Bangladesh" + "<br/>")
+        // }
+
+
+        // for (i=60; i>1; i--){
+        //     document.write(i + "<br/>");
+        // }
+
+        //  for (i=-5; i>-41; i--){
+        //     document.write(i - "<br/>");
+        // }
+        
+
+        // **loop ??
+        // take input from the user
+        const a = parseFloat(prompt("Enter first number: "));
+        const b = parseFloat(prompt("Enter second number: "));
+        const c = parseFloat(prompt("Enter third number: "));
+        let bigger;
+
+        // check the condition
+        if (a>b) {
+            bigger = a;
         }
+        else if (b>a){
+            bigger = b;
+        }
+        else {
+            bigger =c;
+        }
+
+        // display the result
+        document.write("The bigger number is " + bigger );
+
+
+
+        // **evidence exam: 3numbr will be given; have to find out the greatest number.**
+        
+        // ***loop, switch case, if, if else, else
+
     </script>
 
 </body>
