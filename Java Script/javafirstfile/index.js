@@ -36,12 +36,12 @@ else {
     console.log ("The number is odd.");
 }
 
-var number = prompt ("Please Enter Your Digit: ");
+var numbr = prompt ("Please Enter Your Digit: ");
 
-if (number==0)
+if (numbr==0)
 {
     document.write(bird);
 }
-if else (number==1) {
+if else (numbr==1) {
     document.write("river")
 }
