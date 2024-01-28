@@ -198,18 +198,66 @@
         // document.write ("Last value: " +j);
 
 
-        var year =parseInt (prompt("Enter Year Number"));
+        // var year =parseInt (prompt("Enter Year Number"));
 
       
 
-        if (year/4 );
-        {
-            document.write("Leap Year");
-        }
+        // if (year/4 );
+        // {
+        //     document.write("Leap Year");
+        // }
+        
 
-       
+
 
         // (H.W) defind prime number, leap year by loop, if, else
+
+
+
+         // (28-01-24)
+        // MCQ exam: {Object, Function,(JS 36-45 from DAG) introduction to object}
+
+        // var x="34"; 
+        //     var a = 100;
+        //     var y = parseInt(x+a);
+        //     document.write(y);
+
+        // var x=34; 
+        //     var a = 100;
+        //     var y = parseInt(x+a);
+        //     document.write(y);
+
+
+        // var x=34; 
+        //     var a = 98.4563;
+        //     var y = x+a;
+        //     document.write(y);
+
+        // var x=34; 
+        //     var a = 98.456786;
+        //     var y = x+a;
+        //     document.write(y.toFixed(3));
+
+        let num =prompt("Enter the Number: ");
+        var n=prime
+        for (i=2, i<n, i++)
+        let count = 0;
+        if (num==0 || num==1){
+            document.write("Not Prime or Composite");
+        }else{
+            for(i=2; i<num; i++){
+                if(num%2==0){
+                    count++;
+                    break
+                }
+            }
+            if(count==0){
+                document.write("Prime");
+            }else{
+                document.write("Not Prime or Composite")
+            }
+        }
+        
     </script>
 
 
