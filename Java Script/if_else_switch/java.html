@@ -292,8 +292,24 @@
         // document.write("Small Number: "+small+"<br>");
         // document.write("Large Number: "+large+"<br>");
         // document.write("Total Number: "+sum);
-
         
+
+        var data = parseInt(prompt("Enter your number:"));
+        var positive =0;
+        var negative =0;
+        var zero =0;
+        for (i=0; i<data.length; i++){
+            if (data[i]>0){
+                positive ++;
+            } else if (data[i]<0){
+                negative ++;
+            } else {
+                zero ++;
+            }
+        }
+        document.write("Positve Number:"+positive+"<br>");
+        document.write("Negative Number: " +negative+"<br>");
+        document.write("zero: " +zero);
         
     </script>
 
