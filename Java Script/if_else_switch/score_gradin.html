@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        var score = prompt("Enter your score: ");
+       
+        switch (true) {
+            case (score > 100 ):
+            alert("Don't Entry Above 100")
+            break;
+
+            case ( score >= 80 && score <=100 ):
+            document.write("A");
+            break;
+            
+            case (score >= 70 && score <=80 ):
+            document.write("B")
+            break;
+
+            case (score >= 60 && score <=70 ):
+            document.write("C");
+            break;
+
+            case (score >= 50 && score <=60 ):
+            document.write("D");
+            break;
+
+            case (score >= 40 && score <=50 ):
+            document.write("Fail");
+            break;
+                    
+            default:
+            document.write("You are Stupid");
+        
+        }
+    </script>
+</body>
+</html>
