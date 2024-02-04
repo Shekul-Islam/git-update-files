@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const num1 = parseFloat(prompt("Enter the 1st Number: "));
+        const num2 = parseFloat(prompt("Enter the Second Number: "));
+        const num3 = parseFloat(prompt("Enter the third Number: "));
+        let largest;
+
+        if (num1>=num2 && num1>=num3){
+            largest = num1
+        }
+        else if (num2>=num1 && num2>=num3){
+            largest = num2
+        } 
+        else {
+            largest = num3
+        }
+
+        document.write("The largest Number is:" +largest);
+    </script>
+</body>
+</html>

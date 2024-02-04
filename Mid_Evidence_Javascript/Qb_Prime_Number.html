@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1 style="text-align: center; color: deeppink;">Finding Prime Number</h1> <br><hr>
+
+    <script>
+        const p = prompt();
+        let count = 0;
+
+        if (p==0 || p==1){
+            document.write("The Number is not Prime or Composite:")
+        }
+
+        else{
+            for(i=2; i<p; i++){
+                if (p % i == 0){
+                    count ++;
+                    break;
+                }
+            }
+        
+            if (count==0){
+            document.write("This is Prime Number.");
+            }else{
+                document.write("This is Composite Number.")
+            }
+        }
+
+        
+
+    </script>
+</body>
+</html>

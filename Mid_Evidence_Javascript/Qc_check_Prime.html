@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2 style="text-align: center; text-decoration: underline; color: crimson;">Finding Prime Number or Not</h2> <br><hr>
+
+    <script>
+        
+
+const num = prompt();
+        let count=0;
+
+         if(num == 0 || num == 1){
+            document.write("Not Prime or Composite");
+        }
+        
+        else{
+            for(i=2; i<num; i++){
+                if(num % i == 0){
+                    count++;
+                    break;
+                }
+            }
+            
+            if(count==0){
+                document.write("Prime");
+            }else{
+                document.write("Composite")
+            }
+        }
+    </script>
+</body>
+</html>

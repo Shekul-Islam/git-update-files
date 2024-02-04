@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 style="text-align: center; color: rgb(20, 149, 255);">Finding Prime Number</h1> <br><hr>
+    <script>
+
+    var n1 = 0; 
+    var n2 = 1;
+    let next_num;  
+    var num = parseInt (prompt ("Enter the limit for Series: "));  
+        for ( i = 0; i <= num; i++) {  
+            document.write ( + n1);  
+            next_num = n1 + n2; 
+        
+        n1 = n2; 
+        n2 = next_num; 
+
+        document.write(" "); 
+    }  
+    </script>
+</body>
+</html>

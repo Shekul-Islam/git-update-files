@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h2 style="text-align: center; text-decoration: underline; color: rgba(0, 195, 255, 0.842);">Find Score Grade</h2> <br><hr>
+    
+    <script>
+
+        var score = prompt("Enter Your Obtained Number: ");
+
+        switch (true) {
+
+            case (score>100):
+            alert("Don't entry above 100")
+            break;
+            
+            case (score>=90 && score<=100):
+            document.write("A")
+            break;
+
+            case (score>=80 && score<=89):
+            document.write("B")
+            break;
+
+            case (score>=70 && score<=79):
+            document.write("C")
+            break;
+
+            case (score>=60 && score<=69):
+            document.write("D")
+            break;
+        
+            default:
+            document.write("F")
+    
+        }
+
+    </script>
+</body>
+</html>
