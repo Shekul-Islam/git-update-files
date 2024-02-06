@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h1 style="text-align: center; color: rgb(255, 126, 33);">Register Form</h1> <br>
+    <hr>
+
+   <fieldset >
+
+    <form action="#" name="m" style="width: 200px;">
+        
+        <label>Name:</label>
+        <input type="text" name="txtName">
+        <br><br>
+        
+
+        <label>Email:</label>
+        <input type="text" name="txtEmail">
+        <br><br>
+
+        
+        <label>Address:</label>
+        <textarea placeholder="House/Road/Village" name="txtAddress" ></textarea><br><br>
+
+        <!-- <label >Gender:
+        Male<input type="radio" name="rdosex" value="Male"/>
+        Female<input type="radio" name="rdosex" value="Female"/>
+        </label> -->
+    </form>
+   </fieldset>
+
+   <input type="button" onclick="dyn_window()" value="Submit"/>
+      
+
+   <script language="javascript">
+    function dyn_window(){
+        var name=document.m.txtName.value;
+        var email=document.m.txtEmail.value;
+        var address=document.m.txtAddress.value;
+
+        // var Sex ="";
+
+        // for(i=0; i<document.m.rdosex; i++){
+        //     if (document.m.rdosex[i].checked){
+        //         sex=document.m.rdosex[i].value;
+        //     }
+        // }
+
+        doc =open('','', 'width=600px, height=600px');
+
+        with(doc.document){
+            write("Name:"+Name+"<br>");
+            write("Address:"+Address+"<br>");
+            write("Email:"+Email+"<br>");
+            // write("Sex:"+Sex+"<br>");
+            write("<input type='button' value='close me' onclick='self.close();' />");
+            write("<input type='button' value='Print' onclick='self.print();' />");
+        }
+
+    }
+
+   </script>
+</body>
+</html>
