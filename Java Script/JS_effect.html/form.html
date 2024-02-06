@@ -28,10 +28,10 @@
         <label>Address:</label>
         <textarea placeholder="House/Road/Village" name="txtAddress" ></textarea><br><br>
 
-        <!-- <label >Gender:
+        <label >Gender:
         Male<input type="radio" name="rdosex" value="Male"/>
         Female<input type="radio" name="rdosex" value="Female"/>
-        </label> -->
+        </label>
     </form>
    </fieldset>
 
@@ -44,21 +44,21 @@
         var email=document.m.txtEmail.value;
         var address=document.m.txtAddress.value;
 
-        // var Sex ="";
+        var gender ="";
 
-        // for(i=0; i<document.m.rdosex; i++){
-        //     if (document.m.rdosex[i].checked){
-        //         sex=document.m.rdosex[i].value;
-        //     }
-        // }
+        for(i=0; i<document.m.rdosex; i++){
+            if (document.m.rdosex[i].checked){
+                sex=document.m.rdosex[i].value;
+            }
+        }
 
         doc =open('','', 'width=600px, height=600px');
 
         with(doc.document){
-            write("Name:"+Name+"<br>");
-            write("Address:"+Address+"<br>");
-            write("Email:"+Email+"<br>");
-            // write("Sex:"+Sex+"<br>");
+            write("Name:"+name+"<br>");
+            write("Address:"+address+"<br>");
+            write("Email:"+email+"<br>");
+            write("Sex:"+gender+"<br>");
             write("<input type='button' value='close me' onclick='self.close();' />");
             write("<input type='button' value='Print' onclick='self.print();' />");
         }
