@@ -8,34 +8,38 @@
 <body>
     
 
-    <h1 style="text-align: center; color: rgb(255, 126, 33);">Register Form</h1> <br>
+    <h1 style="text-align: center; color: rgb(255, 126, 33);">Register Form</h1>
     <hr>
 
-   <fieldset >
-
-    <form action="#" name="m" style="width: 200px;">
-        
-        <label>Name:</label>
-        <input type="text" name="txtName">
-        <br><br>
+    <center>
         
 
-        <label>Email:</label>
-        <input type="text" name="txtEmail">
-        <br><br>
+    <fieldset style="height: 200px; width: 300px; text-align: center; ">
 
+        <form action="#" name="m" style="padding: 10px; text-align: center;">
         
-        <label>Address:</label>
-        <textarea placeholder="House/Road/Village" name="txtAddress" ></textarea><br><br>
+            <label>Name:</label>
+            <input type="text" name="txtName">
+            <br><br>
+            
+    
+            <label>Email:</label>
+            <input type="text" name="txtEmail">
+            <br><br>
+    
+            
+            <label>Address:</label>
+            <textarea placeholder="House/Road/Village" name="txtAddress" ></textarea><br><br>
+    
+            <label >Gender:
+            Male<input type="radio" name="rdosex" value="Male"/>
+            Female<input type="radio" name="rdosex" value="Female"/>
+            </label>
+        </form>
+    </fieldset>
 
-        <label >Gender:
-        Male<input type="radio" name="rdosex" value="Male"/>
-        Female<input type="radio" name="rdosex" value="Female"/>
-        </label>
-    </form>
-   </fieldset>
-
-   <input type="button" onclick="dyn_window()" value="Submit"/>
+   <input type="button" onclick="dyn_window()" value="Submit" style="text-align: center;"/>
+    </center>
       
 
    <script language="javascript">
