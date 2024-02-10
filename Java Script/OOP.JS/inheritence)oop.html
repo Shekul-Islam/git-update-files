@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        class shingara {
+            constructor ()
+            {
+                this.type="Koliza Shingara";
+                
+            }
+
+        }
+
+        class food extends shingara {
+                constructor (quality, price) 
+                {
+                    super();
+                    
+                    this.quality=quality;
+                    this.price=price;
+                }
+            }
+
+            var s = new food ("Koliza Shingara", "Super Quality", "50 tk");
+
+            document.write(s.type + " " +s.quality+"" +s.price);
+    </script>
+</body>
+</html>
