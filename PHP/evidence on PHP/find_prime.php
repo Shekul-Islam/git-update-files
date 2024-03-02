@@ -25,7 +25,7 @@ if(isset($_POST["submit"]))
 
     if($c==0)
 
-    echo "$b Prime Number";
+    echo "$b is Prime Number";
     else
-    echo "$b Composite Number";
+    echo "$b is Composite Number";
 }?>
