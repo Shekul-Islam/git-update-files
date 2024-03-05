@@ -30,6 +30,17 @@ $t=12;
 $p=4;
 $s=8;
 $k=$s/$p;
-printf($k+$t);
+printf($k+$t)."<br>";
+
+$name=array(
+    array("Rakib",120,"Mirpur"),
+    array("Shakil",130,"Kazipara"),
+    array("Raju",234,"Sciencelab"),
+);
+
+echo $name[1][2];
+echo "<br>";
+
+
 ?>
 
