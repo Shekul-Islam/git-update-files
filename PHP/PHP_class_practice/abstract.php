@@ -22,4 +22,5 @@ class wdpf extends  User{
 
 $add = new wdpf;
 $add->getName();
+$add->info();
 ?>
