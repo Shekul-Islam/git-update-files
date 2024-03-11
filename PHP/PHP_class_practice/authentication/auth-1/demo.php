@@ -1,8 +1,11 @@
+<?php 
+ session_start();
 
-
-<?php
-// Step 2: Include the Student class file
-require_once("evidence_class.php");
+ if(!isset($_SESSION["sname"])){
+	 header("location:login.php");
+  }
+//step 2:
+require_once("student_class.php");
 
 // Check if the form is submitted
 if (isset($_POST["btnSubmit"])) {
@@ -10,6 +13,10 @@ if (isset($_POST["btnSubmit"])) {
     $name = $_POST["txtName"];
     $course = $_POST["txtCourse"];
     $phone = $_POST["txtPhone"];
+    $tmp_name=$_FILES["myfile"]["tmp_name"];
+    $namex=$_FILES['myfile']['name'];
+    $ja="image/";
+        copy($tmp_name,$ja.$namex);
 
     // Validate phone number
     if (preg_match("/^[0-9+]{11,14}$/", $phone)) {
@@ -35,7 +42,7 @@ if (isset($_POST["btnSubmit"])) {
 <head>
     <meta charset="UTF-8">
     <title>Student Form</title>
-    <style>
+    <!-- <style>
         body {
             display: flex;
             justify-content: center;
@@ -58,7 +65,7 @@ if (isset($_POST["btnSubmit"])) {
         }
 
         input {
-            width: 95%;
+            /* width: 95%; */
             margin-bottom: 10px;
         }
 
@@ -82,16 +89,17 @@ if (isset($_POST["btnSubmit"])) {
             width: 30%;
             height: 350px;
         }
-    </style>
+    </style> -->
 </head>
 <body>
 
+
 <fieldset>
     <legend><h2>Student Submission Form</h2></legend>
-    <form action="#" method="post">
+    <form action="#" method="post" enctype="multipart/form-data">
         <div>
             ID:<br/>
-            <input type="text" name="txtId"/>
+            <input type="number" name="txtId"/>
         </div>
 
         <div>
@@ -106,18 +114,35 @@ if (isset($_POST["btnSubmit"])) {
 
         <div>
             Phone<br/>
-            <input type="text" name="txtPhone"/>
+            <input type="number" name="txtPhone"/>
         </div>
 
+
+        
+        
         <div>
+            Upload
+            <input type="file" name="myfile">
             <input type="submit" name="btnSubmit" value="Submit"/>
+            <button><a href="logout.php">Logout</a></button>
+           
         </div>
+       
     </form>
 </fieldset>
+
+
 
 <?php
 Student::display_students();
 ?>
 
+
+
 </body>
+<?php
+if (isset($_POST["btnSubmit"])) {
+	echo "<image src='$ja/$namex' width='300px'>";
+}
+?>
 </html>

@@ -12,7 +12,7 @@ if (isset($_POST["btnSubmit"])) {
     $phone = $_POST["txtPhone"];
 
     // Validate phone number
-    if (preg_match("/^[0-9+]{8,11}$/", $phone)) {
+    if (preg_match("/^[0-9+]{11,14}$/", $phone)) {
         // Create a new Student object
         $student = new Student($id, $name, $course, $phone);
         // Save the student data
@@ -21,6 +21,10 @@ if (isset($_POST["btnSubmit"])) {
     } else {
         echo "Invalid Phone";
     }
+
+
+    
+    
 }
 ?>
 
@@ -33,17 +37,18 @@ if (isset($_POST["btnSubmit"])) {
     <title>Student Form</title>
     <style>
         body {
-            display: block;
-            justify-content:center;
+            display: flex;
+            justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
             text-align: center;
-            padding: 50px;
-            background-color: #2596be;
+            padding: 20px;
+            background-color: #68c8fc;
         }
 
         form {
+            width:75%;
             display: inline-block;
             text-align: left;
             background-color: white;
@@ -53,13 +58,14 @@ if (isset($_POST["btnSubmit"])) {
         }
 
         input {
+            width: 95%;
             margin-bottom: 10px;
         }
 
         table {
             margin: 20px auto;
             border-collapse: collapse;
-            width: 50%;
+            width: 80%;
         }
 
         table, th, td {
@@ -67,7 +73,7 @@ if (isset($_POST["btnSubmit"])) {
         }
 
         fieldset {
-            background-color: Bisque;
+            background-color: #b3ccff;
             text-align: center;
             border: 2px solid teal;
             border-radius: 5px;
@@ -80,9 +86,8 @@ if (isset($_POST["btnSubmit"])) {
 </head>
 <body>
 
-
 <fieldset>
-<legend><h2>Student Information Form</h2></legend>
+    <legend><h2>Student Submission Form</h2></legend>
     <form action="#" method="post">
         <div>
             ID:<br/>

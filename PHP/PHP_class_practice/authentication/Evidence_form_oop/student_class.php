@@ -36,7 +36,12 @@ public static function display_students() {
 
   foreach ($students as $student) {
       list($id, $name, $course, $phone) = explode(",", trim($student, 0 ));
-      echo "<tr><td>$id</td><td>$name</td><td>$course</td><td>$phone</td></tr>";
+      echo "<tr>
+      <td>$id</td>
+      <td>$name</td>
+      <td>$course</td>
+      <td>$phone</td>
+      </tr>";
   }
 
   echo "</table>";
