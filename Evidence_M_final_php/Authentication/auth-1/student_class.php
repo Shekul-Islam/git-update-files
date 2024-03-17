@@ -49,6 +49,5 @@ public static function display_students() {
 
     }
 
-
 // End of the Student class definition
 ?>
