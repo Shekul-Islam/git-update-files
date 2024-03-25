@@ -1,6 +1,6 @@
 <?php
 $databaseHost = 'localhost';
-$databaseName = 'myfproject';
+$databaseName = 'myfirstproject';
 $databaseUsername = 'root';
 $databasePassword = '';
 
