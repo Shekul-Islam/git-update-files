@@ -1,10 +1,11 @@
 <?php 
-$db = new mysqli('localhost','root','','company3');
+$db = new mysqli('localhost','root','','company');
 
 if(isset($_POST['btnSubmit'])){
 	$mname = $_POST['mname'];
+	$address =$_POST['address'];
 	$contact = $_POST['contact'];
-	$db->query(" call add_manufacture('$mname','$contact') ");
+	$db->query(" call add_manufacture('$mname','$address','$contact') ");
 }
 
 
@@ -30,6 +31,10 @@ if(isset($_POST['delmanufact'])){
 		<tr>
 			<td><label for="mname">Name</label></td>
 			<td><input type="text" name="mname" /></td>
+		</tr>
+		<tr>
+			<td><label for="address">Address</label></td>
+			<td><input type="text" name="address" /></td>
 		</tr>
 		<tr>
 			<td><label for="contact">Contact</label></td>

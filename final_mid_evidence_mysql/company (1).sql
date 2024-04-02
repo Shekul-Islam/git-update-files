@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 01, 2024 at 09:53 PM
+-- Generation Time: Apr 02, 2024 at 07:52 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -18,15 +18,15 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `company3`
+-- Database: `company`
 --
 
 DELIMITER $$
 --
 -- Procedures
 --
-CREATE DEFINER=`root`@`localhost` PROCEDURE `add_manufacture` (`mname` VARCHAR(20), `mcontact` VARCHAR(20))   begin 
-insert into manufacturer(name,contact)values(mname,mcontact);
+CREATE DEFINER=`root`@`localhost` PROCEDURE `add_manufacture` (IN `mname` VARCHAR(20), IN `maddress` VARCHAR(100), IN `mcontact` VARCHAR(50))   begin 
+insert into manufacturer(name,address,contact)values(mname,maddress,mcontact);
 end$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `add_product` (`pname` VARCHAR(20), `price` DOUBLE(10,2), `m_id` INT(10))   begin 
@@ -44,6 +44,7 @@ DELIMITER ;
 CREATE TABLE `manufacturer` (
   `id` int(10) NOT NULL,
   `name` varchar(20) NOT NULL,
+  `address` varchar(100) NOT NULL,
   `contact` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -51,10 +52,8 @@ CREATE TABLE `manufacturer` (
 -- Dumping data for table `manufacturer`
 --
 
-INSERT INTO `manufacturer` (`id`, `name`, `contact`) VALUES
-(19, 'Tuhin', '11111111'),
-(20, 'samsum', '01719877455'),
-(22, 'LG', '11111111');
+INSERT INTO `manufacturer` (`id`, `name`, `address`, `contact`) VALUES
+(29, 'Mosharrof', 'mohakhali', '01682928828');
 
 --
 -- Triggers `manufacturer`
@@ -85,12 +84,7 @@ CREATE TABLE `product` (
 
 INSERT INTO `product` (`id`, `name`, `price`, `manufac_id`) VALUES
 (5, 'phone', 45.00, 0),
-(18, 'Manush', 100.00, 19),
-(21, '', 0.00, 19),
-(22, '', 0.00, 19),
-(23, 'Frize', 45.00, 19),
-(24, '', 0.00, 20),
-(27, 'Frize', 45000.00, 22);
+(34, 'sony tvl', 50000.00, 29);
 
 -- --------------------------------------------------------
 
@@ -139,13 +133,13 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `manufacturer`
 --
 ALTER TABLE `manufacturer`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
