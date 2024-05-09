@@ -66,7 +66,8 @@ $connectwithdb = new mysqli('localhost','root','','company');
         
     </form>
 
-<!-- 
+    
+
     <form action="#" method="post">
 	<table>
 		<tr>
@@ -74,10 +75,10 @@ $connectwithdb = new mysqli('localhost','root','','company');
 			<td>
 				<select name="manufac">
 					<?php 
-						// $manufac = $db->query("select * from manufacturer");
-						// while(list($_mid,$_mname) = $manufac->fetch_row()){
-						// 	echo "<option value='$_mid'>$_mname</option>";
-						// }
+						$manufac = $db->query("select * from manufacturer");
+						while(list($_mid,$_mname) = $manufac->fetch_row()){
+							echo "<option value='$_mid'>$_mname</option>";
+						}
 					?>
 				</select>
 			</td>
@@ -102,18 +103,18 @@ $connectwithdb = new mysqli('localhost','root','','company');
 		<th>Contact</th>
 	</tr>
 	<?php 
-		// $product = $db->query(" select * from view_product ");
-		// while(list($_id,$_name,$_price,$_mname,$_mcont) = $product->fetch_row()){
-		// 	echo "<tr> 
-		// 			<td>$_id</td>
-		// 			<td>$_name</td>
-		// 			<td>$_price</td>
-		// 			<td>$_mname</td>
-		// 			<td>$_mcont</td>
-		// 		</tr>";
-		// }
+		$product = $db->query(" select * from view_product ");
+		while(list($_id,$_name,$_price,$_mname,$_mcont) = $product->fetch_row()){
+			echo "<tr> 
+					<td>$_id</td>
+					<td>$_name</td>
+					<td>$_price</td>
+					<td>$_mname</td>
+					<td>$_mcont</td>
+				</tr>";
+		}
 	
-	?> -->
+	?>
 </table>
 </body>
 </html>
